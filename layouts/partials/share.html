@@ -3,6 +3,7 @@
 {{- $twitterSVG := partial "svg/twitter.svg" (dict "class" "w-6 h-6 fill-current") -}}
 {{- $facebookSVG := partial "svg/facebook.svg" (dict "class" "w-6 h-6 fill-current" "viewbox" "-7 -3.5 39 39") -}}
 {{- $facebookApp := .Site.Params.services.facebookApp -}}
+{{- $mastodonSVG := partial "svg/mastodon.svg" (dict "class" "w-6 h-6 fill-current") -}}
 {{- $share := .Site.Data.services.share -}}
 {{- /* Use isset instead of default to support explicit empty array */ -}}
 {{- if isset .Site.Params.share "enable" -}}
@@ -15,6 +16,9 @@
   {{- end }}
   {{- if in $share "facebook" }}
     <a class="ml-3 flex-shrink-0 block text-raven-800 hover:text-raven-900" target="_blank" rel="noopener nofollow" title="{{ (T "facebookShare" $currentPage) }}" href="https://www.facebook.com/dialog/share?app_id={{ $facebookApp }}&display=page&href={{ $currentPage.Permalink }}">{{ $facebookSVG }}</a>
+  {{- end }}
+  {{- if in $share "mastodon" }}
+    <a class="ml-3 flex-shrink-0 block text-raven-800 hover:text-raven-900" target="_blank" rel="noopener nofollow" title="{{ (T "mastodonShare" $currentPage) }}" href="https://toot.karamoff.dev?text={{ printf "%s by @%s %s" $currentPage.Title $author.mastodon $currentPage.Permalink }}">{{ $mastodonSVG }}</a>
   {{- end }}
 </div>
 {{- end -}}

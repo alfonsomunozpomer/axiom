@@ -43,6 +43,9 @@ other = "Buy Now"
 [twitterShare]
 other = "Share on Twitter"
 
+[mastodonShare]
+other = "Share on Mastodon"
+
 [facebookShare]
 other = "Share on Facebook"
 
@@ -57,6 +60,9 @@ other = "Instagram"
 
 [linkedin]
 other = "LinkedIn"
+
+[mastodon]
+other = "Mastodon"
 
 [pinterest]
 other = "Pinterest"

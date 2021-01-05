@@ -43,6 +43,9 @@ other = "Купить"
 [twitterShare]
 other = "Поделиться в Twitter"
 
+[mastodonShare]
+other = "Поделиться в Mastodon"
+
 [facebookShare]
 other = "Поделиться в Facebook"
 
@@ -57,6 +60,9 @@ other = "Instagram"
 
 [linkedin]
 other = "LinkedIn"
+
+[mastodon]
+other = "Mastodon"
 
 [pinterest]
 other = "Pinterest"
